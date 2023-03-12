@@ -29,12 +29,12 @@
   nav a {
     color: white;
     display: block;
-    padding: 10px;
-    text-align: left;
+    padding: 20px;
+
   }
   
   h1 {
-    color: steelblue;
+    color: rgb(39, 91, 133);
     margin-bottom: 1rem;
   }
   
