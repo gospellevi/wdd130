@@ -1,0 +1,16 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins&family=Montserrat+Alternatives&display=swap');
+
+:root {
+    --primary-color: #0091DD;
+    --secondary-color: #E28333;
+    --accent1-color: #FFF533;
+    --accent2-color: #ffffff;
+  
+    --heading-font: 'Poppins', sans-serif;
+    --paragraph-font: 'Montserrat+Alternatives', sans-serif;
+  
+    --nav-background-color: #feffff;
+    --nav-link-color: #f80a0a;
+    --nav-hover-link-color: #141413;
+    --nav-hover-background-color: #f7f479;
+}
