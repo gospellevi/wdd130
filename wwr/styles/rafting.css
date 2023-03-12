@@ -14,3 +14,27 @@
     --nav-hover-link-color: #141413;
     --nav-hover-background-color: #f7f479;
 }
+/*
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  */
+  nav {
+    background-color: steelblue;
+    padding: 10px;
+  }
+  
+  nav a {
+    color: white;
+    display: block;
+    padding: 10px;
+    text-align: left;
+  }
+  
+  h1 {
+    color: steelblue;
+    margin-bottom: 1rem;
+  }
+  
