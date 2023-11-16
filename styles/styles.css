@@ -14,7 +14,9 @@
     box-sizing: border-box;
 }
 
-
+body {
+    background-color: #edfdf8;
+}
 
 nav {
     background-color: steelblue;
@@ -68,16 +70,17 @@ footer {
 
 .box {
     margin: 1rem;
-    border: 1px solid rgba(0,0,0,0.2);
+    border: 1px solid #00000033;
     padding: 1rem;
     background-color: antiquewhite;
     color: #333;
 }
 
-ul.box {
+ul.box {           /*reduce the unordered list container width*/
     width: 320px;
 }
 
 aside h2 {
     position: relative;
 }
+
