@@ -1,10 +1,10 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@700&family=Roboto+Serif:opsz,wght@8..144,500&display=swap');
 
 :root {
-    --primary-color: #D60007;
+    --primary-color: #FF2400;
     --secondary-color: #1DA024;
     --accent1-color: #82DBFF;
-    --accent2-color: #FFE224;
+    --accent2-color: #ffd700;
 
     --heading-font: 'Montserrat', Serif;
     --paragraph-font: 'Roboto+Serif', Serif;
@@ -17,8 +17,7 @@
 
 * {
 	margin: 0;
-	padding: 0;
-    box-sizing: border-box;
+    /* box-sizing: border-box; */
 }
 
 body {
@@ -42,7 +41,13 @@ p {
 
 h1 {
     text-align: center;
-    background-color: var(--accent2-color);
+    background-color: rgba(128, 161, 192, 0.5);
+    position: absolute;
+    top: 100px;
+    left: 0;
+    right: 0;
+    padding: 10px;
+    color: var(--primary-color);
 }
 
 main {
@@ -50,46 +55,39 @@ main {
     position: relative;
 }
 
-div {
-    height: 600px;
-    margin-top: 0;
-    background-color: var(--secondary-color);
+.hero {
+    height: auto;
     position: relative;
 }
 
-article img {
+.hero img {
+    width: 100%;
+}
+
+.hero article img {
     width: 200px;
     height: auto;
     border: 2px solid #fff;
     padding: 1px;
     box-shadow: 0 0 30px #fff;
-    margin: 0 1rem 0 2rem;
     position: relative;
     float: right;
-    top: -16px;
 }
 
-
 article {
+    position: absolute; /*positioned absolutely*/
+    top: 200px;
+    left: 0;
+    right: 0;
     margin-top: 10px;
     margin: 10px auto;
-    background-color: var(--primary-color);
-    max-width: 85%;
-    padding: 20px;
+    background-color: rgba(72, 134, 93, 0.5);
+    max-width: 80%;
+    padding: 15px;
     color: #fff;
 }
 
 footer nav img {
     width: 40px;
     height: 40px;
-}
-
-.hero {
-    background-image: url("images/hero.jpg");
-    background-size: cover;
-    background-position: center;
-    width: 100%;
-    height: 500px;
-    padding-top: 100px;
-
 }
