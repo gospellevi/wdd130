@@ -61,12 +61,11 @@ aside {
 
 aside img {
     width: 200px;
-    height: 400;
 }
 
 header, .grid, footer {
     max-width: 840px;
-    margin: 0 auto; /
+    margin: 0 auto;
 }
   
 footer {
