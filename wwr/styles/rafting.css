@@ -1,7 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@700&family=Roboto+Serif:opsz,wght@8..144,500&display=swap');
 
 :root {
-    --primary-color: #FF2400;
+    --primary-color: #e60707;
     --secondary-color: #1DA024;
     --accent1-color: #82DBFF;
     --accent2-color: #ffd700;
@@ -23,36 +23,61 @@
 body {
     font-family: var(--paragraph-font);
     max-width: 1200px;
+    padding: 10px;
+}
+
+/* header styling begins here */
+
+header {
+    display: grid;
+    grid-template-columns: 1fr 2fr 3fr;
     padding: 20px;
+    margin-bottom: 10px;
+    background-color: var(--primary-color);
 }
 
 header a {
+    display: block;
     text-decoration: none;
+    text-align: center;
+    padding: 5px;
+    border: 2px solid;
+    color: var(--accent2-color);
+    background-color: #000;
+    width: 100px;
 }
+
+header nav {
+    display: flex;
+    align-items: center;
+}
+
+header img {
+    width: 150px;
+    height: 150px;
+    grid-column: 2;
+}
+
+nav a:hover {
+    color: #fff;
+    background-color: rgba(128, 161, 192, 0.5);
+}
+
+/* the hero image and article begins here */
 
 h1, h2, h3, h4, h5, h6 {
     font-family: var(--heading-font);
     color: var(--primary-color);
-}
-
-p {
-    padding: 15px;
+    text-align: center;
 }
 
 h1 {
-    text-align: center;
-    background-color: rgba(128, 161, 192, 0.5);
+    background-color: rgba(128, 161, 192, 0.7);
     position: absolute;
     top: 100px;
     left: 0;
     right: 0;
     padding: 10px;
-    color: var(--primary-color);
-}
-
-main {
-    margin-top: 0;
-    position: relative;
 }
 
 .hero {
@@ -62,16 +87,18 @@ main {
 
 .hero img {
     width: 100%;
+    height: 550px;
 }
 
 .hero article img {
     width: 200px;
     height: auto;
-    border: 2px solid #fff;
+    border: 2px solid var(--accent2-color);
     padding: 1px;
     box-shadow: 0 0 30px #fff;
     position: relative;
     float: right;
+    margin: 5px;
 }
 
 article {
@@ -81,13 +108,87 @@ article {
     right: 0;
     margin-top: 10px;
     margin: 10px auto;
-    background-color: rgba(72, 134, 93, 0.5);
+    background-color: rgba(72, 134, 93, 0.7);
     max-width: 80%;
     padding: 15px;
-    color: #fff;
+    color: var(--accent2-color);
 }
 
+/* the section with history details styling begins here */
+
+.history {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    padding: 20px;
+    margin: 10px 0;
+    background-color: var(--accent2-color);
+}
+
+.history img {
+    grid-column: 2 / 3;
+    grid-row: 2 / 2;
+    width: 320px;
+    justify-self: center;
+}
+
+.history h2 {
+    grid-column: 2 /3;
+    grid-row: 1 / 2;
+    padding-bottom: 10px;
+}
+
+.history p {
+    grid-row: 2 / 2;
+}
+
+/* the adventure with fig images styling begins here */
+
+.adventure {
+    background-color: var(--accent2-color);
+    padding-top: 20px;
+    margin-top: 15px ;
+}
+
+.fig-images {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 20px;
+}
+
+figcaption {
+    text-align: center;
+    padding-bottom: 20px;
+}
+
+.fig-images img {
+    width: 200px;
+    height: auto;
+}
+
+/* the footer styling begins here */
+
+footer {
+    display: grid;
+    grid-template-columns: 65% 1fr;
+    color: var(--accent2-color);
+    background-color: var(--primary-color);
+    align-items: center;
+} 
+
 footer nav img {
-    width: 40px;
-    height: 40px;
+    width: 30px;
+    height: 30px;
+    padding: 10px;
+    margin: 5px;
+    border: 2px solid var(--accent2-color);
+}
+
+.sociallinks {
+    justify-self: center;
+}
+
+
+footer p {
+    justify-self: right;
 }
