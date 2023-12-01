@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        caption{
+            font-size: smaller;
+            font-variant: small-caps;
+            font-weight: 700;
+        }
+
+        table {
+            /* border-spacing: 10px; */
+            border-collapse: collapse;
+        }
+
+        th, td {
+            border: 1px solid black;
+            padding: 15px;
+            /* border-collapse: collapse; */
+            /* border-radius: 10px;
+            border-style: dotted;
+            border-color: black; */
+        }
+
+        th {
+            background-color: rgb(48, 230, 230);
+            text-align: center;
+            text-transform: uppercase;
+            font-size: larger;
+        }
+    </style>
+</head>
+
+<body>
+    <table style="width: 50%;">
+        <caption>TABLE 1: A TRY IT EXAMPLE</caption>
+        <thead>
+            <tr>
+                <th colspan="2">The table header</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>Cell 1</td>
+                <td>Cell 2</td>
+            </tr>
+            <tr>
+                <td>Cell 3</td>
+                <td rowspan="2">Cell 4</td>
+            </tr>
+            <tr>
+              <td>Cell 5</td>
+            </tr>
+            <tr>
+                <td>Cell 6</td>
+                <td>Cell 7</td>
+            </tr>
+            <tr>
+                <td colspan="2">Cell 8</td>
+            </tr>
+        </tbody>
+      </table>
+</body>
+
+</html>
