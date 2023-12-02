@@ -51,6 +51,7 @@ header nav {
     display: flex;
     flex-flow: row wrap;
     align-items: center;
+    gap: 10px;
 }
 
 header img {
@@ -69,6 +70,8 @@ nav a:hover {
 h1, h2, h3, h4, h5, h6 {
     font-family: var(--heading-font);
     color: var(--primary-color);
+    /* color: var(--primary-color); */
+    color: #000;
     text-align: center;
     padding: 10px;
 }
@@ -96,7 +99,7 @@ h1 {
     width: 200px;
     height: auto;
     border: 2px solid var(--accent2-color);
-    box-shadow: 0 0 30px #fff;
+    box-shadow: 0 0 30px #000;
     position: relative;
     float: right;
     margin: 5px;
@@ -108,10 +111,11 @@ article {
     left: 0;
     right: 0;
     margin: 10px auto;
-    background-color: rgba(72, 134, 93, 0.7);
+    background-color: rgba(255, 215, 0, 0.3);
     max-width: 80%;
     padding: 15px;
-    color: var(--accent2-color);
+    color: #000;
+    /* font-weight: bold; */
 }
 
 /* the section with history details styling begins here */
@@ -169,25 +173,25 @@ figcaption {
 
 footer {
     display: grid;
-    grid-template-columns: 65% 1fr;
+    grid-template-columns: 64% 1fr;
     color: var(--accent2-color);
-    background-color: var(--primary-color);
+    background-color: #000;
     align-items: center;
     margin: 10px auto;
+    padding: 20px;
 } 
 
 footer nav img {
-    width: 30px;
-    height: 30px;
-    padding: 10px;
-    margin: 5px;
-    border: 2px solid var(--accent2-color);
+    width: 60px;
+    height: 60px;
+    padding: 5px;
+    /* border: 2px solid var(--accent2-color); */
 }
 
 .sociallinks {
     display: flex;
     flex-flow: row wrap;
-    justify-content: center;
+    justify-content: right;
 }
 
 
