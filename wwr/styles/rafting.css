@@ -1,14 +1,14 @@
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@700&family=Roboto+Serif:opsz,wght@8..144,500&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@700&family=Open+Sans&display=swap");
 
 :root {
-    --primary-color: #e60707;
-    --secondary-color: #1DA024;
+    --primary-color: #1c1c1c;
+    --secondary-color: #da0416;
     --accent1-color: #82DBFF;
     --accent2-color: #ffd700;
 
-    --heading-font: 'Montserrat', Serif;
-    --paragraph-font: 'Roboto+Serif', Serif;
-
+    --heading-font: 'Montserrat', sans-serif;
+    --paragraph-font: 'Open Sans', sans-serif;
+    
     --nav-background-color:  #82DBFF;
     --nav-link-color: #000;
     --nav-hover-link-color: #fff; 
@@ -16,8 +16,7 @@
 }
 
 * {
-	margin: 0;
-    /* box-sizing: border-box; */
+	margin: 0; /*add "auto" later*/
 }
 
 body {
@@ -27,7 +26,6 @@ body {
 }
 
 /* header styling begins here */
-
 header {
     display: grid;
     grid-template-columns: 1fr 2fr 3fr;
@@ -41,17 +39,16 @@ header a {
     text-decoration: none;
     text-align: center;
     padding: 5px;
-    border: 2px solid;
-    color: var(--accent2-color);
-    background-color: #000;
-    width: 100px;
+    border: 2px solid var(--secondary-color);
+    color: #fff;
+    background-color: var(--primary-color);
+    width: 120px;
 }
 
 header nav {
     display: flex;
     flex-flow: row wrap;
     align-items: center;
-    /* gap: 10px; */
 }
 
 header img {
@@ -62,17 +59,13 @@ header img {
 }
 
 nav a:hover {
-    color: #fff;
-    background-color: rgba(128, 161, 192, 0.5);
+    color: var(--secondary-color);
+    background-color: rgb(255, 255, 255);
 }
 
 /* the hero image and article begins here */
-
-h1, h2, h3, h4, h5, h6 {
+h1, h2, h3, h4, h5, h6{
     font-family: var(--heading-font);
-    color: var(--primary-color);
-    /* color: var(--primary-color); */
-    color: #000;
     text-align: center;
     padding: 10px;
 }
@@ -116,39 +109,72 @@ h1, h2, h3, h4, h5, h6 {
     max-width: 80%;
     padding: 15px;
     color: #000;
-    /* font-weight: bold; */
 }
 
-/* the section with history details styling begins here */
-
 .history-section {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    padding: 5px;
+    padding: 20px;
     margin: 10px auto;
-    background-color: var(--accent2-color);
+    background-color: var(--secondary-color);
+    color: #fff;
 }
 
 .history-section h2 {
-    grid-column: 2 /3;
-    grid-row: 1 / 2;
+    padding-bottom: 30px;
+}
+/* .section1 {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center; 
+    align-items: flex-start; 
+    gap: 20px;
+    padding: 10px 20px 40px;
 }
 
-.history-section img {
-    grid-column: 2 / 3;
-    grid-row: 2 / 2;
+.section1 p {
+    text-align: start;
+    flex:  1;
+}
+
+.section1 img {
+    max-width: 100%; 
+    max-height: 320px;
+    width: auto;
+    align-self: center;
+} */
+
+
+.section1 {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-areas: "text1 image text2";
+    gap: 10px;
+    padding: 10px 20px 40px ;
+}
+
+.section1 p {
+    text-align: start;
+}
+
+.section1 img {
+    grid-area: image;
     width: 320px;
-    justify-self: center;
+    height: 100%;
+    /* justify-self: center; */
 }
 
-.history-section p {
-    grid-row: 2 / 2;
+.section1 p:first-child {
+    grid-area: text1;
+}
+
+.section1 p:last-child {
+    grid-area: text2;
 }
 
 /* the adventure with fig images styling begins here */
 
 .adventure-section {
-    background-color: var(--accent2-color);
+    background-color: var(--secondary-color);
+    padding-top: 20px;
 }
 
 .fig-images {
@@ -156,18 +182,20 @@ h1, h2, h3, h4, h5, h6 {
     flex-flow: row wrap;
     justify-content: space-around;
     align-items: center;
-    list-style: none;
     margin: auto;
+    height: 250px;
 }
 
 figcaption {
     text-align: center;
-    padding-bottom: 20px;
+    padding: 5px;
+    background-color: #000;
+    color: #fff;
 }
 
 .fig-images img {
     width: 200px;
-    height: auto;
+    border: 2px solid;
 }
 
 /* the footer styling begins here */
@@ -175,17 +203,26 @@ figcaption {
 footer {
     display: grid;
     grid-template-columns: 64% 1fr;
-    color: var(--accent2-color);
+    color: #fff;
     background-color: #000;
     align-items: center;
     margin: 10px auto;
     padding: 20px;
 } 
 
+footer a {
+    text-decoration: none;
+    color: #fff;
+}
+
+footer a:hover {
+    color: var(--secondary-color);
+}
+
 footer nav img {
-    width: 60px;
-    height: 60px;
-    padding: 5px;
+    width: 50px;
+    height: 50px;
+    padding: 10px;
     /* border: 2px solid var(--accent2-color); */
 }
 
@@ -195,7 +232,6 @@ footer nav img {
     justify-content: right;
 }
 
-
 footer p {
     justify-self: right;
 }
@@ -204,7 +240,7 @@ footer p {
 
 .contact-support {
     margin: 10px auto;
-    background-color: var(--accent2-color);
+    background-color: #fce3e3;
 }
 
 .contact-support article {
@@ -212,6 +248,7 @@ footer p {
     flex-flow: row wrap;
     justify-content: center;
     padding-bottom: 1em;
+    color: #fff;
 }
 
 .contact-support h4, p, form {
@@ -219,20 +256,32 @@ footer p {
 }
 
 .contact-support article div {
-    width: 300px;
+    width: 350px;
     margin: 10px;
     padding: 20px;
     border-radius: 5px;
-    background-color: var(--accent1-color);
+    background-color: var(--secondary-color);
+}
+
+.contact-support form {
+    background-color: var(--secondary-color);
+}
+
+button[type="button"] {
+    /* background-color: #da0416; */
+    margin: 10px;
+
 }
 
 button[type="button"]:hover {
     background-color: #000;
-    color: #ffd700;
+    color: #fff;
 }
 
-.contact-support img {
-    margin: .5em 0 0 80px;
+.fone {
+    display: flex;
+    gap: 30px;
+    font-style: italic;
 }
 
 /*section elements styling*/
@@ -242,7 +291,7 @@ button[type="button"]:hover {
     align-items: center;
     justify-content: space-between;
     gap: 20px;
-    background-color: var(--secondary-color);
+    background-color: var(--primary-color);
 }
 
 .company-info div {
@@ -271,60 +320,32 @@ iframe {
 /* employee profile styling */
 .employee-profiles {
     margin: 10px auto;
-    background-color: var(--accent2-color);
+    background-color: var(--secondary-color);
+}
+
+.employee-profiles h5 {
+    text-align: center;
+    border: 2px solid ;
+    border-width: 0 100px;
+    border-color: var(--secondary-color);
+    color: #fff;
+    background-color: var(--primary-color);
 }
 
 .employee-profiles h3 {
     font-size: 30px;
+    color: #fff;
+    text-transform: uppercase;
 }
 
 .employee-profiles div {
     display: grid;
-    margin-left: 10px;
-    padding-bottom: 20px;
-    grid-template-columns: 400px 400px;
-    grid-template-rows: repeat(3, auto);
-    grid-gap: 20px;
-}
+    grid-template-columns: repeat(3, 1fr);
 
-.employee-profiles div img:nth-child(1) {
-    grid-column: 1;
-    grid-row: 1;
-}
-.employee-profiles div img:nth-child(2) {
-    grid-column: 2;
-    grid-row: 2;
-}
-
-.employee-profiles div img:nth-child(3) {
-    grid-column: 1;
-    grid-row: 3;
-}
-
-.employee-profiles div h5:nth-child(1) {
-    grid-column: 2;
-    grid-row: 1;
-}
-
-.employee-profiles div h5:nth-child(2) {
-    grid-column: 1;
-    grid-row: 2;
-}
-
-.employee-profiles div h5:nth-child(3) {
-    grid-column: 2;
-    grid-row: 3;
 }
 
 .employee-profiles div img {
-    width: 350px;
-    height: 350px;
-}
-
-.employee-profiles h5{
-    font-size: larger;
-    text-align: center;
-    align-self: center;
+    justify-self: center;
 }
 
 @media screen and (max-width: 768px) {
@@ -333,16 +354,25 @@ iframe {
         grid-template-rows: auto;
     }
 
-    .employee-profiles h5 {
-        display: none;
+    .employee-profiles h5:first-of-type {
+        grid-row: 1;
+    }
+
+    .employee-profiles h5:nth-of-type(2) {
+        grid-row: 3;
+    }
+
+    .employee-profiles h5:last-of-type {
+        grid-row: 5;
     }
 }
 
 /*Styling Forms Area*/
 /* fieldset and Legend Styling */
 form {
-    background-color: var(--accent1-color);
+    background-color: #8f8f8f;
     padding: 10px;
+    color: #fff;
 }
 
 fieldset {
@@ -354,10 +384,10 @@ fieldset {
 }
 
 legend {
-    font-size: 20px;
+    font-size: 25px;
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
     font-weight: 700;
-    padding: 0 5px;
+    padding: 5px;
     color: var(--nav-link-color);
 }
 
@@ -399,6 +429,7 @@ fieldset h4 {
 /* ****************Radio buttons and Check boxes*******************/
 .radios {
     margin-bottom: 1em;
+
 }
 
 input[type="checkbox"] + label, input[type="radio"] + label {
@@ -419,87 +450,11 @@ input[type="submit"] {
 }
 
 input[type="submit"]:hover {
-    background-color: var(--accent2-color);
-    color: #000;
+    background-color: #fff;
+    color: var(--secondary-color);
+    font-weight: 700;
+    border: 2px solid #da0416;
 }
-
-
-/* .enquiry {
-    margin: 10px 0;
-    background-color: var(--accent1-color);
-} */
-
-/* form {
-    margin: 20px;
-} */
-
-/* label.purpose {
-    font-size: 1.3rem;
-    color: var(--nav-hover-link-color);
-    text-decoration: underline;
-} */
-
-/* label {
-    display: inline-block;
-} */
-
-/* .name-email {
-    margin: 20px auto;
-}
-
-input[type="text"],
-input[type="email"] {
-    display: block;
-    width: 50%;
-    padding: 10px;
-    border: 1px solid #ccc;
-    border-radius: 4px;
-    margin-bottom: 20px;
-    justify-content: center;
-}
-
-textarea {
-    width: 66%;
-    border-radius: 10px;
-    padding: 10px;
-    font-size: large;
-}
-
-[name="options"] {
-    display: inline-block;
-    padding-left: 10px;
-}
-
-.message-purpose {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    width: 66%;
-}
-
-.radios {
-    margin: 15px 0 15px 20px;
-}
-
-.radios label {
-    margin: 5px;
-    font-size: larger;
-}
-
-[type="submit"] {
-    margin: 20px auto;
-    padding: 10px;
-    font-size: 20px;
-    border-radius: 10px;
-    cursor: pointer;
-    background-color: #0091DD;
-    font-weight: bold;
-    width: 67%;
-}
-
-[type="checkbox"] {
-    margin: 15px 0 15px 0;
-    font-size: 30px;
-} */
 
 @media screen and (min-width: 500px) {
     fieldset {
@@ -514,9 +469,113 @@ textarea {
         margin-top: 0;
         margin-right: .5em;
     }
-
-    /* .contact {
-        min-width: 320px;
-        width: 40%;
-    } */
 }
+
+/* ******************Trips Page styling starts here******************** */
+.tripsPage {
+    position: relative;
+}
+
+.tripsPage img {
+    max-width: 100%;
+    height: 1500px;
+    filter: brightness(40%);
+}
+
+.callToAction {
+    position: absolute;
+    top: 300px;
+    /* margin-left: 100px; */
+    transform: translate(40%, -50%);
+}
+
+.callToAction p {
+    font-weight: 700;
+}
+
+.callToAction a {
+    text-decoration: none;
+    color: aqua;
+    font-weight: 700;
+    font-style: italic;
+    padding-right: 5px;
+}
+
+.callToAction a:hover {
+    color: gold;
+
+}
+
+.tripsPage h1,
+.tripsPage p {
+    color: #fff;
+    text-transform: uppercase;
+    max-width: 40rem;
+}
+
+.tripsDetail {
+    position: absolute;
+    top: 500px;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+    margin: 10px;
+}
+
+.tripsDetail article {
+    display: grid;
+    grid-template-columns: 40% 60%;
+    background-color: #da0416;
+    color: #fff;
+    height: 300px;
+}
+
+.tripsDetail article img {
+    grid-column: 1 / 1;
+    width: 20em;
+    height: 250px;
+    filter: none;
+}
+
+article .flexArticle {
+    display: flex;
+    flex-direction: column;
+}
+
+.flexArticle p:first-of-type {
+    font-size: 20px;
+    font-weight: bold;
+    text-align: justify;
+    max-width: 150px;
+    padding: 20px 0 20px 20px;
+    background-color: #000;
+}
+
+.flexArticle h3:first-of-type,
+.flexArticle p:nth-of-type(2) {
+    text-align: start;
+    padding-left: 30px;
+    text-transform: uppercase;
+}
+
+.triangle-button {
+    position: absolute;
+    transform: translate(300px, 220px);
+}
+
+.triangle-button:hover {
+    border-color: #fff #fff;
+}
+
+.backToTop {
+    color: aqua;
+    position: absolute;
+    transform: translate(550px, -100px)
+}
+
+.backToTop:hover {
+    color: gold;
+   font-style: italic;
+}
+
+
