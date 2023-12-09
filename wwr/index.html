@@ -12,54 +12,67 @@
     <header>
         <img src="images/logo.png" alt="Rafting Site Logo" width="200">
         <nav>
-            <a href="index.html" target="_blank">Home</a>
-            <a href="about.html" target="_blank">About Us</a>
-            <a href="trips.html" target="_blank">Trips</a>
-            <a href="contact.html" target="_blank">Contact Us</a>
+            <a href="index.html">Home</a>
+            <a href="about.html">About Us</a>
+            <a href="trips.html">Trips</a>
+            <a href="contact.html">Contact Us</a>
         </nav>
     </header>
     <main>
-        <section class="home">
+        <section class="homeHeading">
             <h1>Welcome to White Water Rafting</h1>
             <!-- Large full-width image -->
             <img src="images/rafting-home.jpg" alt="Rafting Adventure" width="100%">
+            <div class="newsletter">
+                <h3>Subscribe to Our Newsletter</h3>
+                <form action="contact-results.html" class="homeForm" method="get">
+                    <label for="name">Name:</label>
+                    <input type="text" name="name" id="name" placeholder="Your full name" required>
+                    <label for="email">Email:</label>
+                    <input type="email" name="email" id="email" placeholder="Your email address" required>
+                    <br>
+                    <button type="submit">Subscribe</button>
+                </form>
+            </div>
         </section>
 
-        <section class="newsletter">
+        <!-- <section class="newsletter">
             <h3>Subscribe to Our Newsletter</h3>
-            <form action="subscribe.php" method="post">
-                <input type="text" name="name" placeholder="Your Name" required>
-                <input type="email" name="email" placeholder="Your Email" required>
+            <form action="contact-results.html" class="homeForm" method="get">
+                <label for="name">Name:</label>
+                <input type="text" name="name" id="name" placeholder="Your full name" required>
+                <label for="email">Email:</label>
+                <input type="email" name="email" id="email" placeholder="Your email address" required>
+                <br>
                 <button type="submit">Subscribe</button>
             </form>
+        </section> -->
+
+        <section class="viewTrips">
+            <h2>Plan Your Adventure Now!</h2>
+            <a href="trips.html" class="cta-button"><button>View trips!</button></a>
         </section>
 
-        <section class="call-to-action">
-            <h3>Plan Your Adventure Now!</h3>
-            <p>Explore our thrilling trips!</p>
-            <a href="trips.html" class="cta-button">View Trips</a>
-        </section>
-
-        <section class="grid-layout">
+        <section class="tripsDesc">
             <div class="grid-item">
-                <img src="images/home-adventure-pic1.jpg" alt="Adventure 1">
-                <p>Description of Adventure 1</p>
+                <img src="images/home-adventure-pic2.jpg" alt="Adventure 1">
+                <h3>Description of Adventure 1</h3>
                 <p>Embark on thrilling rafting expeditions through challenging rapids, experiencing the raw power of nature.</p>
     </div>
             </div>
             <div class="grid-item">
-                <img src="images/home-adventure-pic2.jpg" alt="Adventure 2">
-                <p>Description of Adventure 2</p>
+                <img src="images/home-adventure-pic1.jpg" alt="Adventure 2">
+                <h3>Description of Adventure 2</h3>
                 <p>Our expert guides ensure a safe yet exhilarating journey, sharing their expertise and passion for adventure.</p>
             </div>
             <div class="grid-item">
-                <img src="images/home-adventure-pic3.jpg" alt="Adventure 2">
-                <p>Description of Adventure 3</p>
+                <img src="images/home-adventure-pic3.jpg" alt="Adventure 3">
+                <h3>Description of Adventure 3</h3>
                 <p>Discover breathtaking landscapes and scenic beauty while navigating through pristine waterways.</p>
             </div>
             <div class="grid-item">
-                <img src="images/home-adventure-pic4.jpg" alt="Adventure 2">
-                <p>Description of Adventure 4</p>
+                <img src="images/home-adventure-pic4.jpg" alt="Adventure 4">
+                <h3>Description of Adventure 4</h3>
                 <p>Enjoy unforgettable experiences with family-friendly trips suitable for all ages and skill levels.</p>
             </div>
         </section>
