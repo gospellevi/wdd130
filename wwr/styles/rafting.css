@@ -661,7 +661,7 @@ article .flexArticle {
     text-align: justify;
     max-width: 150px;
     padding: 10px 0 10px 30px;
-    background-color: #000;
+    background-color: var(--primary-color);
 }
 
 .flexArticle h4:first-of-type,
@@ -695,7 +695,7 @@ article .flexArticle {
 /* Existing styles */
 
 /* Media query for smaller screens (e.g., mobile) */
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 600px) {
     .callToAction {
         transform: translate(-8px, -1200px);
         top: auto; /* Reset top positioning */
@@ -704,10 +704,22 @@ article .flexArticle {
     }
 
     .backToTop a {
-        
-        transform: translate(120px, -100px); /* Remove transformation */
-        top: auto; /* Reset top positioning */
-        text-align: center; /* Center the text */
-        padding: 20px; /* Add padding for spacing */
+        transform: translate(120px, -100px);
+        padding: 20px;
+    }
+
+    .tripsDetail article {
+        height: 150px;
     }
 }
+
+@media screen and (min-width: 1200px) {
+    .tripsDetail h4 {
+        font-size: 2vh;
+    }
+    
+    .tripsDetail p {
+        font-size: 1.5vh;
+    }
+}
+    
