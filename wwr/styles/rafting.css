@@ -74,7 +74,7 @@ h1, h2, h3, h4, h5, h6{
 
 footer {
     display: grid;
-    grid-template-columns: 70% 1fr;
+    grid-template-columns: 80% 1fr;
     color: #fff;
     background-color: var(--primary-color);
     align-items: center;
@@ -113,12 +113,14 @@ footer nav img {
 
 footer p {
     justify-self: right;
+    /* margin-left: 20em; */
 }
 
 /* ****************Home Page Styling starts here**************** */
 .homeHeading {
     position: relative;
     height: auto;
+    margin-bottom: 5px;
 }
 
 .homeHeading h1 {
@@ -187,7 +189,6 @@ footer p {
 
 .homeForm button {
     margin-left: 50px;
-    padding: 0 auto;
 }
 
 .viewTrips {
@@ -257,6 +258,7 @@ footer p {
 
     .homeHeading img {
         height: 400px;
+        width: 100%;
     }
 
 }
@@ -417,9 +419,9 @@ figcaption {
 
 .callToAction {
     position: absolute;
-    top: 300px;
+    top: 200px;
     /* margin-left: 100px; */
-    transform: translate(40%, -50%);
+    transform: translate(45%, -50%);
 }
 
 .callToAction p {
@@ -448,7 +450,7 @@ figcaption {
 
 .tripsDetail {
     position: absolute;
-    top: 500px;
+    top: 400px;
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     gap: 20px;
@@ -504,29 +506,12 @@ article .flexArticle {
     border-color: #fff #fff;
 }
 
-.backToTop a {
-    color: aqua;
-    position: absolute;
-    transform: translate(500px, -100px);
-    text-decoration: none;
-}
-
-.backToTop a:hover {
-    color: gold;
-   font-style: italic;
-}
-
 /* Media query for smaller screens (e.g., mobile) */
 @media screen and (max-width: 600px) {
     .callToAction {
         transform: translate(-8px, -1200px);
         top: auto;
         text-align: center;
-        padding: 20px;
-    }
-
-    .backToTop a {
-        transform: translate(120px, -100px);
         padding: 20px;
     }
 
@@ -537,6 +522,7 @@ article .flexArticle {
     .tripsDetail {
         display: flex;
         flex-direction: column;
+        top: 500px;
     }
 
     .tripsDetail h4 {
@@ -614,17 +600,14 @@ button[type="button"]:hover {
     display: flex;
     flex-flow: row wrap;
     align-items: center;
-    justify-content: space-between;
-    gap: 20px;
+    justify-content: flex-start;
     background-color: var(--primary-color);
 }
 
 .company-info div {
     display: flex;
     flex-direction: column;
-    align-items: flex-start;
     row-gap: 20px;
-    margin-left: 20px;
 }
 
 .company-info div, 
@@ -637,9 +620,13 @@ h2,
     padding-left: 10px;
 }
 
+.sociallinks {
+    gap: 5px;
+}
+
 iframe {
     border: none;
-    
+    margin-right: 0;  
 }
 
 /* employee profile styling */
@@ -655,6 +642,7 @@ iframe {
     border-color: var(--secondary-color);
     color: #fff;
     background-color: var(--primary-color);
+    margin-top: 10px;
 }
 
 .employee-profiles h3 {
@@ -721,18 +709,16 @@ label {
     margin-top: 10px;
 }
 
-label[for="name"], label[for="email"] {
+.name-email label {
+
     text-align: start;
-    margin-left: 4em;
+    margin-left: 5em;
 }
 
-.radios label {
-    margin-top: 0;
-}
-
-input {
+.name-email input {
     padding: 5px;
     border: 1px solid #000;
+    max-width: 300px;
 }
 
 input[type="email"], input[type="text"] {
@@ -794,4 +780,8 @@ input[type="submit"]:hover {
         margin-top: 0;
         margin-right: .5em;
     }
+
+    /* .name-email label {
+        margin-left: 0;
+    } */
 }
