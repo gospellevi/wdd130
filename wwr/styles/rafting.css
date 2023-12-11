@@ -123,6 +123,10 @@ footer p {
     margin-bottom: 5px;
 }
 
+.homeHeading img {
+    width: 1200px;
+}
+
 .homeHeading h1 {
     position: absolute;
     animation: bounce 1s infinite;
